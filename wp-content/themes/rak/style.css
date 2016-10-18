@@ -396,6 +396,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   background-color: #ccc;
+  color: #707070;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -428,8 +429,27 @@ ul {
   list-style: none; 
 }
 
+/* Reusable Classes */
+
 .row {
   padding: 0;
+}
+
+.banner {
+	padding: 431px 0 0;
+	background-size: cover!important;
+	background-attachment: fixed!important;
+}
+
+.home-link:link,
+.home-link:visited {
+  color: #ff9e15;
+  text-decoration: none;
+}
+
+.home-link:hover,
+.home-link:active {
+  color: #23b2bf;
 }
 
 /*--------------------------
@@ -438,4 +458,44 @@ ul {
 
 /*--------------------------
 9.3 Footer
+--------------------------*/
+
+/*--------------------------
+9.X Fallbacks
+--------------------------*/
+
+#single-page,
+#index,
+#archive,
+#search,
+.error-404 {
+  padding: 20px 0 80px;
+  background-color: #fff;
+}
+
+#single {
+  background-color: #fff;
+}
+
+.page-header {
+  padding: 0 0 3%;
+  border-color: #23b2bf;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.page-title {
+  color: #ff9e15;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.search-term {
+  color: #23b2bf;
+}
+
+/*--------------------------
+9.X Queries
 --------------------------*/

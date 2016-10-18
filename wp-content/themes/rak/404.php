@@ -11,52 +11,23 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'rak' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'rak' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( rak_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'rak' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'rak' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-8">
+							<header class="page-header">
+								<h1 class="page-title"><?php esc_html_e( '404', 'rak' ); ?></h1>
+							</header><!-- .page-header -->
+							<div class="page-content">
+								<p><?php esc_html_e( 'Parece que a página que você tentou acessar não existe.', 'rak' ); ?></p>
+								<p>Gostaria de ir para a <a class="home-link" href="<?php echo esc_html(home_url("/")); ?>" title="Home">Home</a>?</p>
+							</div><!-- .page-content -->
+						</div>
+					</div>
+				</div>
 			</section><!-- .error-404 -->
-
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

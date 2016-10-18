@@ -44,7 +44,8 @@ function rak_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'rak' ),
+		'header' => esc_html__( 'Topo', 'rak' ),
+		'footer' => esc_html__( 'Rodapé', 'rak' ),
 	) );
 
 	/*
@@ -89,7 +90,7 @@ function rak_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'rak' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'rak' ),
+		'description'   => esc_html__( 'Adicione widgets aqui.', 'rak' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
