@@ -16,8 +16,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
+<!-- Favicon -->
+<link rel="icon" href="<?php bloginfo("stylesheet_directory"); ?>/assets/img/logo/favicon_16.png" size="16x16">
+<link rel="icon" href="<?php bloginfo("stylesheet_directory"); ?>/assets/img/logo/favicon_32.png" size="16x16">
 <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
 <!-- Bootstrap -->
 <link href="<?php bloginfo("stylesheet_directory"); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 <!-- Icons -->
