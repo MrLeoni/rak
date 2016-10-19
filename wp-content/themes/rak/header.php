@@ -35,3 +35,24 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div id="content" class="site-content">
+		
+		<div class="header-wrapper">
+			<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="logo-box">
+							<a href="<?php echo esc_html(home_url("/")); ?>" title="Home"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/img/logo/rak-logo.png" alt="RAK Logistics"></a>
+						</div>
+						<?php
+							$menu_args = array(
+								"menu_class" => "nav-links",
+								"container" => "nav",
+								"container_class" => "main-nav",
+								"theme_location" => "header",
+							);
+							wp_nav_menu( $menu_args );
+						?>
+					</div>
+				</div>
+			</header>
+		</div>

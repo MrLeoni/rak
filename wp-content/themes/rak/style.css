@@ -456,9 +456,96 @@ ul {
 9.2 Header
 --------------------------*/
 
+.header-wrapper {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#header {
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo-box {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  float: left;
+}
+
+.logo-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.main-nav {
+  margin: 28px 0 0;
+  float: right;
+}
+
+.nav-links .menu-item {
+  display: inline-block;
+  /*margin: 0 25px 0 0;*/
+  font-size: 1em;
+}
+
+.nav-links .menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item a:link,
+.menu-item a:visited {
+  display: block;
+  padding: 4px 25px;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu-item a:after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  z-index: -9;
+  background-color: #ff9e15;
+  -webkit-transform: rotate(15deg) translate(-50%, -50%);
+  transform: rotate(15deg) translate(-50%, -50%);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  opacity: 0;
+}
+
+.menu-item a:hover:after,
+.menu-item a:active:after{
+  width: 75%;
+  opacity: 1;
+}
+
 /*--------------------------
 9.3 Footer
 --------------------------*/
+
+/*--------------------------
+9.4 Home
+--------------------------*/
+
+.home-banner {
+  padding: 75vh 0 0;
+}
 
 /*--------------------------
 9.X Fallbacks
