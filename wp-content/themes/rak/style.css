@@ -456,23 +456,26 @@ ul {
 9.2 Header
 --------------------------*/
 
-.header-wrapper {
+.nav-wrapper {
   display: block;
   width: 100%;
   height: auto;
+  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-#header {
-  padding: 20px 0;
+  z-index: 9999;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .logo-box {
   width: 180px;
   height: auto;
+  padding: 0;
+  border: 0;
   margin: 0;
   float: left;
 }
@@ -491,7 +494,6 @@ ul {
 
 .nav-links .menu-item {
   display: inline-block;
-  /*margin: 0 25px 0 0;*/
   font-size: 1em;
 }
 
@@ -535,9 +537,185 @@ ul {
   opacity: 1;
 }
 
+/* Mobile */
+
+.nav-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  margin: 0;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  z-index: 99999;
+  background-color: #222;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  color: #ff9e15;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.nav-btn:hover,
+.nav-btn.active-btn {
+	color: #222;
+	background-color: #ff9e15;
+}
+
+.nav-btn:focus {
+	outline: none;
+}
+
+.nav-btn i {
+	position: relative;
+	left: 2px;
+}
+
+.nav-btn.active-btn i {
+	left: 0;
+}
+
 /*--------------------------
 9.3 Footer
 --------------------------*/
+
+#footer {
+	padding: 30px 0 0;
+	background-color: #22b2bf;
+}
+
+.footer-img-box {
+	width: 90%;
+}
+
+.footer-img-box,
+.footer-img-box img,
+.footer-content-box {
+	display: block;
+	height: auto;
+	margin: 0 auto;
+}
+
+.footer-img-box img {
+	width: 100%;
+}
+
+.footer-content-box {
+	width: 100%;
+	padding: 0;
+	border: 0;
+	color: #fff;
+	font-weight: 900;
+}
+
+.footer-content-box .footer-links {
+	margin: 0 0 15px;
+	text-align: left;
+}
+
+.footer-content-box .footer-links:last-child {
+	margin: 0;
+}
+
+.footer-content-box .footer-links a:after {
+	display: none;
+}
+
+.footer-content-box .footer-links a:link,
+.footer-content-box .footer-links a:visited {
+	display: inline-block;
+	padding: 5px;
+	-webkit-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+	font-weight: 400;
+}
+
+.footer-content-box .footer-links a:hover,
+.footer-content-box .footer-links a:active {
+	color: #ff9e15;
+}
+
+.footer-news {
+	width: 80%;
+	background-color: #2cd0df;
+	color: #fff;
+}
+
+.footer-form-box {
+	display: block;
+	width: 240px;
+	height: auto;
+	margin: 0;
+}
+
+.footer-news,
+.footer-news-btn {
+	display: block;
+	height: auto;
+	padding: 5px;
+	border: 0;
+	margin: 0;
+	float: left;
+}
+
+.footer-news-btn {
+	width: 20%;
+	background-color: #1f9ea8;
+	color: #2cd0df;
+	-webkit-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+.footer-news-btn:hover,
+.footer-news-btn:focus {
+	background-color: #fff;
+	outline: none;
+}
+
+.copy {
+	margin: 30px 0 0;
+	background-color: transparent;
+	color: #fff;
+}
+
+.copy p {
+	width: 75%;
+	padding: 10px 0 10px 280px;
+	float: left;
+	background-color: #ff9e15;
+}
+
+.copy .delucca {
+	width: 25%;
+	padding: 10px 0 12px 30px;
+	float: right;
+  background-color: #fff;
+}
+
+.delucca a:link,
+.delucca a:visited {
+	display: block;
+	width: 24px;
+	height: 18px;
+	padding: 0;
+	margin: 0;
+	background: url(assets/img/logo/delucca-logo.png) no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	overflow: hidden;
+	-webkit-transition: 0.15s ease-out;
+	transition: 0.15s ease-out;
+	text-indent: 9999px;
+}
+
+.delucca a:hover,
+.delucca a:active {
+	background-position: center top;
+}
 
 /*--------------------------
 9.4 Home
@@ -586,3 +764,100 @@ ul {
 /*--------------------------
 9.X Queries
 --------------------------*/
+
+@media (max-width: 1200px) {
+	
+	/* Footer */
+	
+	.copy p {
+		padding: 10px 0 10px 10%;
+	}
+	
+	.copy .delucca {
+		width: 25%;
+		padding: 10px 0 12px 30px;
+		float: right;
+	  background-color: #fff;
+	}
+
+}
+
+@media (max-width: 768px) {
+	
+	/* Footer */
+	
+	.footer-img-box {
+		width: 100%;
+		margin: 0 auto 20px;
+	}
+	
+	.footer-content-box {
+		width: 80%;
+		padding: 20px;
+		border-top: 1px solid #ff9e15;
+		text-align: center;
+		font-weight: 400;
+	}
+	
+	.footer-content-box .footer-links {
+		text-align: center;
+	}
+	
+	.footer-form-box {
+		width: 100%;
+    margin: 0 auto;
+	}
+	
+	.copy {
+		color: #fff;
+		background-color: #fff;
+	}
+	
+}
+
+@media (max-width: 736px) {
+  
+  /* Header */
+  
+  .nav-wrapper {
+    width: auto;
+    padding: 20px;
+    bottom: 0;
+    left: -217px;
+    background-color: #222;
+  }
+  
+  .logo-box {
+    width: 180px;
+    height: auto;
+    padding: 10% 0;
+    border-bottom: 1px solid #ff9e15;
+    margin: 10% auto;
+    float: none;
+  }
+  
+  .main-nav {
+    float: none;
+  }
+  
+  .nav-links .menu-item {
+    display: block;
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .menu-item a:after {
+    left: 35%;
+  }
+  
+  .nav-btn {
+    display: block;
+  }
+  
+  /* Footer */
+	
+	.footer-img-box {
+		width: 240px;
+	}
+  
+}

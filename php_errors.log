@@ -1,0 +1,22 @@
+[19-Oct-2016 18:25:15 UTC] PHP Warning:  Missing argument 1 for register_taxonomy(), called in /home/ubuntu/workspace/wp-content/themes/rak/functions.php on line 173 and defined in /home/ubuntu/workspace/wp-includes/taxonomy.php on line 351
+[19-Oct-2016 18:25:15 UTC] PHP Stack trace:
+[19-Oct-2016 18:25:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[19-Oct-2016 18:25:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[19-Oct-2016 18:25:15 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[19-Oct-2016 18:25:15 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:39
+[19-Oct-2016 18:25:15 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:92
+[19-Oct-2016 18:25:15 UTC] PHP   6. do_action() /home/ubuntu/workspace/wp-settings.php:411
+[19-Oct-2016 18:25:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/plugin.php:524}() /home/ubuntu/workspace/wp-includes/plugin.php:524
+[19-Oct-2016 18:25:15 UTC] PHP   8. categorias_custom_taxonomy() /home/ubuntu/workspace/wp-includes/plugin.php:524
+[19-Oct-2016 18:25:15 UTC] PHP   9. register_taxonomy() /home/ubuntu/workspace/wp-content/themes/rak/functions.php:173
+[19-Oct-2016 18:25:15 UTC] PHP Warning:  Missing argument 2 for register_taxonomy(), called in /home/ubuntu/workspace/wp-content/themes/rak/functions.php on line 173 and defined in /home/ubuntu/workspace/wp-includes/taxonomy.php on line 351
+[19-Oct-2016 18:25:15 UTC] PHP Stack trace:
+[19-Oct-2016 18:25:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[19-Oct-2016 18:25:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[19-Oct-2016 18:25:15 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[19-Oct-2016 18:25:15 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:39
+[19-Oct-2016 18:25:15 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:92
+[19-Oct-2016 18:25:15 UTC] PHP   6. do_action() /home/ubuntu/workspace/wp-settings.php:411
+[19-Oct-2016 18:25:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/plugin.php:524}() /home/ubuntu/workspace/wp-includes/plugin.php:524
+[19-Oct-2016 18:25:15 UTC] PHP   8. categorias_custom_taxonomy() /home/ubuntu/workspace/wp-includes/plugin.php:524
+[19-Oct-2016 18:25:15 UTC] PHP   9. register_taxonomy() /home/ubuntu/workspace/wp-content/themes/rak/functions.php:173

@@ -36,8 +36,8 @@
 <div id="page" class="site">
 	<div id="content" class="site-content">
 		
-		<div class="header-wrapper">
-			<header id="header">
+		<header id="header">
+			<div class="nav-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="logo-box">
@@ -54,5 +54,6 @@
 						?>
 					</div>
 				</div>
-			</header>
-		</div>
+			</div>
+			<button class="nav-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+		</header>

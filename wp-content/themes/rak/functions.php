@@ -139,3 +139,43 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Register "Complementos" post type
+ */
+add_filter("init", "complementos_post_type");
+function complementos_post_type() {
+	
+	$label = array( "name" => "Complementos", "singular_name" => "Complemento" );
+	$args = array(
+		"labels" => $label,
+		"public" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_admin_bar" => true,
+		"menu_position" => 20,
+		"menu_icon" => "dashicons-plus",
+		"supports" => array("title", "editor", "thumbnail"),
+	);
+	
+	register_post_type("complementos", $args);
+}
+
+/**
+ * Register "Categoria" taxonomy for "Complementos" post type
+ */
+add_filter("init", "categorias_custom_taxonomy");
+function categorias_custom_taxonomy() {
+	
+	$label = array( "name" => "Categorias", "singular_name" => "Categoria" );
+	$args = array(
+		"labels" => $label,
+		"public" => true,
+		"show_ui" => true,
+		"show_admin_column" => true,
+		"hierarchical" => true,
+		"capabilities" => array("manage_terms", "edit_terms", "delete_terms", "assign_terms")
+	);
+	
+	register_taxonomy("categoria", "complementos", $args);
+}
