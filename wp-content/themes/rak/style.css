@@ -441,6 +441,10 @@ ul {
 	background-attachment: fixed!important;
 }
 
+.banner-content {
+	padding: 40vh 0 30vh;
+}
+
 .home-link:link,
 .home-link:visited {
   color: #ff9e15;
@@ -452,6 +456,25 @@ ul {
   color: #23b2bf;
 }
 
+/* links & buttons */
+
+.normal-btn:link,
+.normal-btn:visited {
+	display: inline-block;
+	padding: 5px 25px;
+	margin: 20px 0 0;
+	background-color: #ff9e15;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.normal-btn:hover,
+.normal-btn:active {
+	background-color: #23b2bf;
+}
+
 /*--------------------------
 9.2 Header
 --------------------------*/
@@ -461,7 +484,7 @@ ul {
   width: 100%;
   height: auto;
   padding: 20px 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -531,8 +554,13 @@ ul {
   opacity: 0;
 }
 
+.current-menu-item.menu-item a:link:after {
+	width: 75%;
+	opacity: 1;
+}
+
 .menu-item a:hover:after,
-.menu-item a:active:after{
+.menu-item a:active:after {
   width: 75%;
   opacity: 1;
 }
@@ -660,6 +688,7 @@ ul {
 	border: 0;
 	margin: 0;
 	float: left;
+	font-weight: 400;
 }
 
 .footer-news-btn {
@@ -721,8 +750,142 @@ ul {
 9.4 Home
 --------------------------*/
 
-.home-banner {
-  padding: 75vh 0 0;
+#home {
+	background-color: #ededed;
+}
+
+.home-banner.banner {
+  padding:  0;
+}
+
+.home-banner .banner-content {
+	text-align: right;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 900;
+}
+
+/* Contact */
+
+.home-contact {
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: relative;
+	background-color: #fff;
+}
+
+.home-contact-wrapper {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translate(-0, -50%);
+	transform: translate(-0, -50%);
+	z-index: 999;
+	background: url(assets/img/bg/home-contato.png) no-repeat center;
+	background-size: cover;
+}
+
+.home-contact-content-box {
+	padding: 0;
+	border: 1px solid #23b2bf;
+	text-align: center;
+}
+
+.border-left-right {
+	border-left: 1px solid #23b2bf;
+	border-right: 1px solid #23b2bf;
+}
+
+.border-right {
+	border-right: 1px solid #23b2bf;
+}
+
+.home-contact-content-box span,
+.home-contact-content-box i {
+	display: block;
+	height: auto;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	float: left;
+}
+
+.home-contact-content-box span {
+	width: 80%;
+	height: 90px;
+	overflow: hidden;
+	text-align: left;
+	color: #fff;
+}
+
+.home-contact-content-box span p {
+	position: relative;
+	top: 10px;
+}
+
+.home-contact-content-box i {
+	width: 20%;
+	font-size: 2em;
+	color: #ff9e15;
+	position: relative;
+	top: 12px;
+}
+
+/* Section Title */
+
+.first-section-title.section-title {
+	margin: 110px 0 50px;
+}
+
+.section-title {
+	text-align: center;
+	margin: 60px 0 50px ;
+}
+
+.section-title h2 {
+	color: #23b2bf;
+	font-size: 1.8em;
+}
+
+.section-title p {
+	margin: 5px 0 0;
+	color: #bbb;
+	font-size: 1.2em;
+}
+
+.follow-icon {
+	position: relative;
+	margin: 15px 0;
+}
+
+.follow-icon span {
+	display: block;
+	width: 3px;
+	height: 3px;
+	margin: 5px auto;
+	overflow: hidden;
+	text-indent: 99999px;
+	background-color: #bbb;
+}
+
+.follow-icon .follow-bar {
+	width: 70px;
+	height: 2px;
+}
+
+.follow-icon i {
+	font-size: 2.8em;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	color: #bbb;
 }
 
 /*--------------------------
@@ -787,7 +950,7 @@ ul {
 	/* Footer */
 	
 	.footer-img-box {
-		width: 100%;
+		width: 240px;
 		margin: 0 auto 20px;
 	}
 	
@@ -813,15 +976,32 @@ ul {
 		background-color: #fff;
 	}
 	
+	/* Home */
+	
+	.first-section-title.section-title {
+		margin: 50px 0 30px;
+	}
+	
+	.section-title {
+		margin: 50px 0 30px ;
+	}
+	
 }
 
 @media (max-width: 736px) {
+	
+	/* Setup */
+	
+	.banner-content {
+		padding: 15vh 0 20vh;
+	}
   
   /* Header */
   
   .nav-wrapper {
     width: auto;
     padding: 20px;
+    position: fixed;
     bottom: 0;
     left: -217px;
     background-color: #222;
@@ -854,10 +1034,14 @@ ul {
     display: block;
   }
   
-  /* Footer */
+}
+
+@media (max-width: 460px) {
 	
-	.footer-img-box {
-		width: 240px;
+	/* Setup */
+	
+	body {
+		font-size: 12px;
 	}
-  
+	
 }
