@@ -179,3 +179,12 @@ function categorias_custom_taxonomy() {
 	
 	register_taxonomy("categoria", "complementos", $args);
 }
+
+/**
+ * Filter the_excerpt legth to 20 characters.
+ */
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

@@ -9,11 +9,10 @@
 $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id, "full", true);
 
-/**
- * 
- * Get ACF Fields
- * 
- */
+/*===============================
+ Get ACF Fields
+================================*/
+ 
 // Banner Field
 $banner_text = get_field("banner-text");
 
@@ -37,6 +36,9 @@ $section_subtitle_01 = get_field("home-section-01-subtitle");
 $section_title_02 = get_field("home-section-02-title");
 $section_subtitle_02 = get_field("home-section-02-subtitle");
 
+// Home Content
+$home_img = get_field("home-img");
+
 
 get_header(); ?>
 
@@ -49,9 +51,8 @@ get_header(); ?>
 			  	</div>
 			  </div>
 			</section>
-			<section id="home">
+			<section id="home-hero">
 				<div class="container">
-					
 					<div class="home-contact hidden-xs">
 						<div class="home-contact-wrapper">
 							<div class="row">
@@ -80,7 +81,11 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					
+				</div>
+			</section>
+			
+			<section id="blog">
+				<div class="container">
 					<div class="row">
 						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6">
 							<div class="section-title first-section-title">
@@ -97,11 +102,44 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<?php
-					while ( have_posts() ) : the_post();
-						the_content();
-					endwhile; // End of the loop.
-					?>
+					<?php get_template_part("template-parts/content", "blog"); ?>
+				</div>
+			</section>
+			
+			<section id="home-content">
+				<div class="home-content-wrapper clearfix">
+					<div class="home-content-img-box hidden-sm hidden-xs">
+						<img src="<?php echo $home_img["url"]; ?>" alt="<?php echo $home_img["alt"]; ?>">
+					</div>
+					<div class="home-content-content-box">
+						<?php
+							while ( have_posts() ) : the_post();
+								the_content();
+							endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
+			</section>
+			
+			<section id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6">
+							<div class="section-title first-section-title">
+								<h2><?php echo $section_title_02; ?></h2>
+								<p><?php echo $section_subtitle_02; ?></p>
+								<div class="follow-icon">
+									<span class="follow-bar">barra</span>
+									<span>ponto</span>
+									<span>ponto</span>
+									<span>ponto</span>
+									<span>ponto</span>
+									<i class="ion-ios-arrow-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php get_template_part("template-parts/content", "about"); ?>
 				</div>
 			</section>
 		</main><!-- #main -->

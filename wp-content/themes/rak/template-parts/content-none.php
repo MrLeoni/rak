@@ -17,7 +17,7 @@
 		
 			<div class="page-content">
 				<?php
-				if ( is_home() ) : ?>
+				if ( is_home() || is_front_page() ) : ?>
 					
 					<p><?php esc_html_e( 'Parece que no momento não temos conteúdo nessa área do site. Por favor, volte mais tarde', 'rak' ); ?></p>
 					<?php

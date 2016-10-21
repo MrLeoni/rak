@@ -35,4 +35,41 @@ $(document).ready(function() {
     /* Yeah, i know, not the best way to do this, but it works! */
   });
   
+  //About posts
+  $(".about-post-title").click(function() {
+    
+    // Variables
+    var button = $(this).attr("data-title");
+    var target = $("#"+button);
+    
+    // Hide & Show content
+    $(".about-post-content").fadeOut(200);
+    target.fadeIn(500);
+    
+    // Toggle between class
+    $(".about-post-title").removeClass('active');
+    $(this).addClass('active');
+    
+  });
+  
+  // Make a function to get a element css heihgt and using it to clear another element
+  function alignAboutPost() {
+    var height = $(".about-post-title").css("height");
+    $(".about-post-content").css("top", height);
+  }
+  // Call the function
+  alignAboutPost();
+    
+  
+  // About Slider
+  $(".about-slider").bxSlider({
+    controls: false,
+    mode: "fade",
+    //auto: true,
+    pause: 5000,
+    speed: 600,
+    autoHover: true,
+    adaptiveHeight: true
+  });
+  
 });
