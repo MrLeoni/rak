@@ -452,13 +452,29 @@ ul {
 }
 
 .banner {
-	padding: 431px 0 0;
+	position: relative;
+	overflow: hidden;
 	background-size: cover!important;
 	background-attachment: fixed!important;
 }
 
+.banner i {
+	display: block;
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	font-size: 2.4em;
+	color: #fff;
+}
+
 .banner-content {
-	padding: 40vh 0 30vh;
+	padding: 20vh 0 30vh;
+}
+
+.banner-content h1 {
+	font-size: 3em;
 }
 
 .home-link:link,
@@ -470,6 +486,10 @@ ul {
 .home-link:hover,
 .home-link:active {
   color: #23b2bf;
+}
+
+.template-box {
+	padding: 60px 0 0;
 }
 
 /* links & buttons */
@@ -855,6 +875,7 @@ ul {
 }
 
 .home-banner .banner-content {
+	padding: 40vh 0 30vh;
 	text-align: right;
 	color: #fff;
 	font-size: 2em;
@@ -1013,6 +1034,20 @@ ul {
 	background-color: #ededed;
 }
 
+#about .banner {
+	padding: 0;
+}
+
+#about .banner-content {
+	padding: 20vh 0 15vh;
+	color: #fff;
+	text-align: center;
+}
+
+#about .section-title {
+	margin: 110px 0;
+}
+
 .about-post-wrapper {
 	height: 500px;
 	position: relative;
@@ -1089,12 +1124,24 @@ ul {
   background: #ff9e15;
 }
 
+/* Page Content */
+
+.about-page-content-box {
+	padding: 50px 0 70px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
 /*--------------------------
 9.X Blog
 --------------------------*/
 
 #blog {
 	padding: 0 0 50px;
+	background-color: #ededed;
+}
+
+#servicos {
 	background-color: #ededed;
 }
 
@@ -1156,6 +1203,42 @@ ul {
 .read-more:hover,
 .read-more:active {
 	color: #fff;
+}
+
+/*--------------------------
+9.X Contact
+--------------------------*/
+
+#contact {
+	background-color: #fff;
+}
+
+#contact .row {
+	width: 100%;
+}
+
+.contact-container.container-fluid {
+	padding: 0;
+}
+
+.contact-container .contact-col {
+	padding: 0;
+} 
+
+.map-box,
+.map-box iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+.map-box iframe {
+	height: 600px;
+}
+
+.contact-content {
+	padding: 4% 4% 4% 40%;
 }
 
 /*--------------------------
@@ -1230,6 +1313,16 @@ ul {
 
 @media (max-width: 768px) {
 	
+	/* Setup */
+	
+	.banner i {
+		font-size: 2em;
+	}
+	
+	.banner-content h1 {
+		font-size: 2em;
+	}
+	
 	/* Footer */
 	
 	.footer-img-box {
@@ -1279,6 +1372,16 @@ ul {
 		height: 380px;
 	}
 	
+	/* Contact */
+	
+	.map-box iframe {
+		height: 350px;
+	}
+	
+	.contact-content {
+		padding: 15%;
+	}
+	
 }
 
 @media (max-width: 736px) {
@@ -1326,6 +1429,12 @@ ul {
   .nav-btn {
     display: block;
   }
+  
+  /* About */
+	
+	#about .banner-content {
+    padding: 10vh 0 20vh;
+	}
   
 }
 
