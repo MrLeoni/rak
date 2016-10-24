@@ -17,7 +17,6 @@ get_header(); ?>
 			  <div class="banner-content">
 					<div class="container">
 						<?php echo $banner_text; ?>
-						<i class="ion-chevron-down"></i>
 					</div>
 				</div>
 			</section>

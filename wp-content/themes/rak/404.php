@@ -12,6 +12,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			
+			<section class="parallax banner not-found-banner" data-speed="10">
+		  	<!-- Empty -->
+			</section>
 			<section class="error-404 not-found">
 				<div class="container">
 					<div class="row">

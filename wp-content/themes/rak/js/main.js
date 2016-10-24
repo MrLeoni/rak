@@ -65,7 +65,7 @@ $(document).ready(function() {
   $(".about-slider").bxSlider({
     controls: false,
     mode: "fade",
-    //auto: true,
+    auto: true,
     pause: 5000,
     speed: 600,
     autoHover: true,
