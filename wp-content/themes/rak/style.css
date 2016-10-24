@@ -37,7 +37,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   9.1 Setup
   9.2 Header
   9.3 Footer
-  9.X Queries
+  9.4 Home
+  9.5 About
+  9.6 Blog
+  9.7 Posts
+  9.8 Contact
+  9.9 Icons
+  9.10 Fallbacks
+  9.11 Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Navigation
@@ -1005,7 +1012,8 @@ ul {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	        transform: translate(-50%);
 }
 
 .home-content-content-box {
@@ -1046,7 +1054,7 @@ ul {
 }
 
 /*--------------------------
-9.X About
+9.5 About
 --------------------------*/
 
 #about {
@@ -1157,7 +1165,7 @@ ul {
 }
 
 /*--------------------------
-9.X Blog
+9.6 Blog
 --------------------------*/
 
 #blog {
@@ -1230,7 +1238,7 @@ ul {
 }
 
 /*--------------------------
-9.X Posts
+9.7 Posts
 --------------------------*/
 
 #post {
@@ -1293,7 +1301,7 @@ ul {
 }
 
 /*--------------------------
-9.X Icons
+9.8 Icons
 --------------------------*/
 
 .rak {
@@ -1415,7 +1423,7 @@ ul {
 }
 
 /*--------------------------
-9.X Contact
+9.9 Contact
 --------------------------*/
 
 #contact {
@@ -1478,7 +1486,7 @@ ul {
 }
 
 /*--------------------------
-9.X Fallbacks
+9.10 Fallbacks
 --------------------------*/
 
 #single-page,
@@ -1505,12 +1513,20 @@ ul {
   text-align: center;
 }
 
+.not-found-banner {
+	padding: 40vh 0 0;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/bg/home-banner.png) no-repeat center 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/bg/home-banner.png) no-repeat center 0;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 .search-term {
   color: #23b2bf;
 }
 
 /*--------------------------
-9.X Queries
+9.11 Queries
 --------------------------*/
 
 @media (max-width: 1200px) {

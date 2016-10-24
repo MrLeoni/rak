@@ -48,8 +48,8 @@ $post_tags = get_the_tags();
 						<h2>Setores que Atendemos</h2>
 						<div class="row">
 							<?php
+								// Using foreach to loop through $post_tags array.
 								foreach($post_tags as $tag) { ?>
-								
 								<div class="col-sm-6">
 									<div class="setor-box clearfix">
 										<i class="rak rak-<?php echo $tag->slug;?>"></i>
@@ -57,7 +57,9 @@ $post_tags = get_the_tags();
 									</div>
 								</div>	
 								
-								<?php }
+								<?php
+								// End Loop
+								}
 							?>
 						</div>
 					</div>

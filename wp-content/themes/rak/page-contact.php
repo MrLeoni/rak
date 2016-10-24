@@ -9,6 +9,9 @@
 $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id, "full", true);
 
+// Banner Field
+$banner_text = get_field("banner-text");
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
