@@ -1,4 +1,11 @@
 =========================
+Version 1.1.0
+Update: 25/10/2016
+=========================
+Changes:
+- Create "home.php" to use as a "site under construction" page.
+
+=========================
 Version 1.0.0
 Release date: 24/10/2016
 =========================
