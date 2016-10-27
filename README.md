@@ -1,4 +1,11 @@
 =========================
+Version 1.1.1
+Update: 27/10/2016
+=========================
+Changes:
+- Posts queried in 'content-blog.php' is now ordered by modified date
+
+=========================
 Version 1.1.0
 Update: 25/10/2016
 =========================
