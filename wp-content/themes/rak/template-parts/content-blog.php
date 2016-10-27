@@ -8,6 +8,7 @@
  // Making args for querying posts
  $blog_args = array(
 	"post_type"	=> "post",
+	"orderby"	=> "modified",
  );
  // Querying Blog posts
  $blog_query = new WP_Query($blog_args);
