@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Agência Delucca
 Author URI: http://www.agenciadelucca.com.br
 Description: Description
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rak
@@ -477,7 +477,7 @@ ul {
 }
 
 .banner-content {
-	padding: 20vh 0 30vh;
+	padding: 22% 0 0;
 }
 
 .banner-content h1 {
@@ -908,7 +908,7 @@ ul {
 }
 
 .home-banner .banner-content {
-	padding: 40vh 0 30vh;
+	padding: 17% 0 17%;
 	text-align: right;
 	color: #fff;
 	font-size: 2em;
@@ -1066,7 +1066,7 @@ ul {
 }
 
 #about .banner-content {
-	padding: 20vh 0 15vh;
+	padding: 10% 0 15%;
 	color: #fff;
 	text-align: center;
 }
@@ -1252,7 +1252,7 @@ ul {
 }
 
 .post-banner {
-	padding: 40vh 0 0;
+	padding: 25% 0 0;
 }
 
 #post .entry-content {
@@ -1514,7 +1514,7 @@ ul {
 }
 
 .not-found-banner {
-	padding: 40vh 0 0;
+	padding: 25% 0 0;
 	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/bg/home-banner.png) no-repeat center 0;
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/bg/home-banner.png) no-repeat center 0;
 	background-attachment: fixed;
@@ -1530,6 +1530,13 @@ ul {
 --------------------------*/
 
 @media (max-width: 1200px) {
+	
+	/* Home */
+	
+	.home-banner .banner-content,
+	#about .banner-content {
+		padding: 25% 0 25%;
+	}
 	
 	/* Footer */
 	
@@ -1675,7 +1682,7 @@ ul {
 	/* Setup */
 	
 	.banner-content {
-		padding: 15vh 0 20vh;
+		padding: 25% 0 0;
 	}
   
   /* Header */
@@ -1715,12 +1722,6 @@ ul {
   .nav-btn {
     display: block;
   }
-  
-  /* About */
-	
-	#about .banner-content {
-    padding: 10vh 0 20vh;
-	}
   
 }
 

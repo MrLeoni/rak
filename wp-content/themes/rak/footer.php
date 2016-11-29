@@ -24,12 +24,12 @@ $footer_post_query = new WP_Query( $footer_post_args );
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-md-2">
 					<div class="footer-img-box">
 						<img src="<?php bloginfo("stylesheet_directory"); ?>/assets/img/logo/rak-logo.png" alt="RAK Logistics">
 					</div>
 				</div>
-				<div class="col-sm-offset-1 col-sm-2">
+				<div class="col-md-offset-1 col-md-2">
 					<?php
 						$menu_args = array(
 							"menu_class" => "footer-links",
@@ -40,7 +40,7 @@ $footer_post_query = new WP_Query( $footer_post_args );
 						wp_nav_menu( $menu_args );
 					?>
 				</div>
-				<div class="col-sm-offset-1 col-sm-4">
+				<div class="col-md-offset-1 col-md-4">
 					<div class="footer-content-box">
 						<?php
 							while($footer_post_query->have_posts()): $footer_post_query->the_post();
@@ -50,7 +50,7 @@ $footer_post_query = new WP_Query( $footer_post_args );
 						?>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-md-2">
 					<div class="footer-img-box">
 						<img src="<?php bloginfo("stylesheet_directory"); ?>/assets/img/logo/selo-iso.png" alt="Selo ISO 9001">
 					</div>
