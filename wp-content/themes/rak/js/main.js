@@ -2,12 +2,23 @@ $(document).ready(function() {
   
   // Parallax Efect
   $('.parallax').each(function(){
-  	var $obj = $(this);
-  	$(window).scroll(function() {
-  		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
-  		var bgpos = '50% '+ yPos + 'px';
-  		$obj.css('background-position', bgpos );
-  	}); 
+		var $obj = $(this);
+		var windowWidth = $(window).width();
+		
+		// Don't apply this efect on mobile devices or devices with screen smaller than 1200px
+		if( windowWidth < 1200 ) {
+			  		
+			// Empty
+			
+		} else {
+			  	  
+			$(window).scroll(function() {
+        var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+        var bgpos = '50% '+ yPos + 'px';
+        $obj.css('background-position', bgpos );
+      });
+			  	  
+		}
   });
   
   // Mobile, open and close main-nav

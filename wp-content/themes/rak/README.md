@@ -29,6 +29,9 @@ It's a theme for __content__ administration, therefore the capabillity for chang
 
 ## Versions:
 
+### 1.1.3 - 29/11/2016
+* Another change in CSS for better results in Mobile Safari. Change "background-attachment" to "scroll", in a few CSS classes, on screens smaller than 1200px.
+
 ### 1.1.2 - 29/11/2016
 * Change padding units from "vh" to "%" in ".banner" and related CSS classes, for better results in Mobile Safari browsers.
 
@@ -46,3 +49,5 @@ It's a theme for __content__ administration, therefore the capabillity for chang
 
 ### 1.0.0 - 24/10/2016
 * Theme released!
+
+<br>
